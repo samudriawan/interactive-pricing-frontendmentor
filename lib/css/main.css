@@ -1,0 +1,264 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+  list-style-image: url(../../images/icon-check.svg);
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+input {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  max-width: 1440px;
+  min-height: 100%;
+  margin-inline: auto;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  background-color: #fafbff;
+  background-image: url(../../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 -50%;
+}
+
+.header {
+  background-image: url(../../images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.header h4 {
+  font-weight: 800;
+}
+.header p {
+  font-weight: 600;
+  color: #858fad;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  width: 85%;
+  max-width: 450px;
+  padding: 3em 1em;
+  background-color: white;
+  color: #858fad;
+  border-radius: 1em;
+}
+.price > p:first-child {
+  letter-spacing: 1px;
+}
+
+.slider {
+  margin: 1em 0 2em 0;
+}
+
+#billPrice {
+  color: #293356;
+  font-weight: 800;
+  vertical-align: sub;
+}
+
+.billing {
+  transform: translateX(15px);
+}
+.billing .discount {
+  margin-left: 5px;
+  padding: 1px 6px;
+  font-size: 9px;
+  background: #feece7;
+  color: #ff8c66;
+  border-radius: 30px;
+}
+.billing .discount-text {
+  display: none;
+}
+
+.feature {
+  margin-inline: auto;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  background-color: transparent;
+}
+input[type=range]:active::-moz-range-thumb {
+  opacity: 1;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]:focus::-moz-range-thumb {
+  opacity: 1;
+}
+input[type=range]::-moz-range-track {
+  height: 9px;
+  background-color: #eaeefb;
+  border-radius: 5em;
+}
+input[type=range]::-moz-range-thumb {
+  width: 2em;
+  height: 2em;
+  background-image: url(../../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5em 1em;
+  background-position: 50%;
+  background-color: #10d5c2;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+input[type=range]::-moz-range-thumb:hover {
+  opacity: 0.5;
+}
+input[type=range]::-moz-range-progress {
+  background-color: #a5f3eb;
+  height: 9px;
+  border-radius: 5em;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 22px;
+}
+.switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #cdd7ee;
+  border-radius: 45px;
+}
+.switch-slider::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 200ms;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch input:hover + .switch-slider {
+  background-color: #a5f3eb;
+}
+.switch input:checked + .switch-slider {
+  background-color: #a5f3eb;
+}
+.switch input:checked + .switch-slider::before {
+  transform: translateX(13px);
+}
+
+input[type=button] {
+  display: block;
+  width: 190px;
+  height: 40px;
+  margin-top: 2em;
+  border: none;
+  outline: none;
+  border-radius: 5em;
+  background-color: #293356;
+  color: #bdccff;
+}
+input[type=button]:hover {
+  color: white;
+}
+
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-position: 0 -5rem;
+  }
+
+  .header p {
+    display: inline-block;
+  }
+
+  .price {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(autofit, 1fr);
+    gap: 1em;
+    align-items: center;
+    max-width: 500px;
+    padding: 2em 3em;
+    margin-top: 2rem;
+  }
+  .price > p {
+    margin-bottom: 0;
+  }
+
+  .slider {
+    grid-column: span 2;
+    grid-row: 2/3;
+    margin: 0;
+    margin-top: 1em;
+  }
+
+  .billing {
+    grid-column: span 2;
+    justify-content: center;
+    transform: translateX(40px);
+  }
+  .billing .discount-text {
+    display: inline;
+  }
+
+  .billingPrice {
+    margin-left: auto;
+  }
+
+  .feature {
+    margin-inline: 1em;
+  }
+
+  input[type=button] {
+    margin-top: 2.1em;
+    margin-left: auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
