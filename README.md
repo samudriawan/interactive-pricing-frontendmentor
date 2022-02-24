@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-[Solution URL]() |
-[Live Site URL]() |
+[Solution URL](https://www.frontendmentor.io/solutions/mobilefirst-with-sass-and-bootstrap-s9i6I2aiM) |
+[Live Site URL](https://samudriawan.github.io/interactive-pricing-frontendmentor/) |
 [Challenge](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8)
 
 ## My process
